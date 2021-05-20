@@ -1,0 +1,1 @@
+# KundenManager-SHC
