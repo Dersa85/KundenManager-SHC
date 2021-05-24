@@ -55,7 +55,11 @@ class Member:
             parent = 1 währe dann von ersten Elternteil
             parent = 2 währe dann von ersten Elternteil
         """
-        return
+        if (parent == 1):
+            return self._data['parent-1-first-name']
+        elif (parent == 2):
+            return self._data['parent-2-first-name']
+        return self._data['first-name']
 
     def get_last_name(self, parent=0):
         """ parent = 0 bedeutet das es vom Member gewollt ist.

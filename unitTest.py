@@ -1,13 +1,22 @@
 import unittest
-from database import hard_drive
+from database.hard_drive import HardDrive
 
 
 class TestHardDrive(unittest.TestCase):
 
+    def setUp(self) -> None:
+        d = {
+            'string': 'string',
+            'int': 1,
+            'float': 0.5,
+            'array': ['0', 1, 1.5],
+            'dict': {'content': 'someone'}
+        }
+        HardDrive.save(d, 'test.json')
+        self.loaded_dict = HardDrive.load('test.json')
 
-    def test_load(self):
-        drive = hard_drive.HardDrive()
-        self.assertEqual(drive.load('members/0.json'), None)
+    def test_HardDrive(self):
+        self.assertEqual(self.loaded_dict[''], None)
 
 
 
