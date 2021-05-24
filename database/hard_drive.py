@@ -1,7 +1,7 @@
 
 
 
-class HardDrive:
+class SaverLoader:
 
     def save(self, data, path):
         """Speichert die dict als json in den angegeben Pfad"""
@@ -12,3 +12,4 @@ class HardDrive:
         return
 
 
+HardDrive = SaverLoader()
