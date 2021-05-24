@@ -3,51 +3,30 @@ from database.hard_drive import HardDrive
 class Member:
     """ Daten von einem Kunden """
     def __init__(self, json):
-        self._data = json
-        # Test variable
-        self.test_member = {
-            'first-name': 'Max',
-            'last-name': 'Helmut',
-            'member-birthday': '16.09.2005',
-            'parent-1-first-name': 'Eduard',
-            'parent-1-last-name': 'Helmut',
-            'parent-2-first-name': 'Marina',
-            'parent-2-last-name': 'Helmut',
-            'abo-category': 0,
-            'abo-cycle': 6,
-            'entry-date': '01.01.2000',
-            'cancellation-date': '',
-            'exit-date': '',
-            'street': 'Teststr',
-            'housenumber': '10',
-            'city': 'Schwelm',
-            'zip-code': '12345',
-            'contact-number': '0160/12345678',
-            'email': 'test.test@test.test',
-            'health-problems': ''
-        }
+        self._data = self._import(json)
+
 
     def _import(self, dictonary):
-        self._data = {
+        return {
             'first-name': dictonary.get('first-name', ''),
             'last-name': dictonary.get('last-name', ''),
-            'member-birthday': '16.09.2005',
-            'parent-1-first-name': 'Eduard',
-            'parent-1-last-name': 'Helmut',
-            'parent-2-first-name': 'Marina',
-            'parent-2-last-name': 'Helmut',
+            'member-birthday': dictonary.get('member-birthday', ''),
+            'parent-1-first-name': dictonary.get('parent-1-first-name', ''),
+            'parent-1-last-name': dictonary.get('parent-1-last-name', ''),
+            'parent-2-first-name': dictonary.get('parent-2-first-name', ''),
+            'parent-2-last-name': dictonary.get('parent-2-last-name', ''),
             'abo-category': dictonary.get('abo-category', -1),
-            'abo-cycle': 6,
-            'entry-date': '01.01.2000',
-            'cancellation-date': '',
-            'exit-date': '',
-            'street': 'Teststr',
-            'housenumber': '10',
-            'city': 'Schwelm',
-            'zip-code': '12345',
-            'contact-number': '0160/12345678',
-            'email': 'test.test@test.test',
-            'health-problems': ''
+            'abo-cycle': dictonary.get('abo-cycle', -1),
+            'entry-date': dictonary.get('entry-date', ''),
+            'cancellation-date': dictonary.get('cancellation-date', ''),
+            'exit-date': dictonary.get('exit-date', ''),
+            'street': dictonary.get('street', ''),
+            'housenumber': dictonary.get('housenumber', ''),
+            'city': dictonary.get('city', ''),
+            'zip-code': dictonary.get('zip-code', ''),
+            'contact-number': dictonary.get('contact-number', ''),
+            'email': dictonary.get('email', ''),
+            'health-problems': dictonary.get('health-problems', '')
         }
 
     def get_first_name(self, parent=0):
