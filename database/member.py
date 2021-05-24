@@ -45,44 +45,48 @@ class Member:
             parent = 1 währe dann von ersten Elternteil
             parent = 2 währe dann von ersten Elternteil
         """
-        return
+        if (parent == 1):
+            return self._data['parent-1-last-name']
+        elif (parent == 2):
+            return self._data['parent-2-last-name']
+        return self._data['last-name']
 
     def get_birthday(self):
-        return
+        return self._data['member-birthday']
 
     def get_abo_category(self):
-        return
+        return self._data['abo-category']
 
     def get_abo_cycle(self):
-        return
+        return self._data['abo-cycle']
 
     def get_entry_date(self):
-        return
+        return self._data['entry-date']
 
     def get_cancellation_date(self):
-        return
+        return self._data['cancellation-date']
 
     def get_exit_date(self):
-        return
+        return self._data['exit-date']
 
     def get_street(self):
-        return
+        return self._data['street']
 
     def get_housenumber(self):
-        return
+        return self._data['housenumber']
 
     def get_city(self):
-        return
+        return self._data['city']
 
     def get_zip_code(self):
-        return
+        return self._data['zip-code']
 
     def get_contact_number(self):
-        return
+        return self._data['contact-number']
 
     def get_email(self):
-        return
+        return self._data['email']
 
     def get_health_problem(self):
-        return
+        return self._data['health-problems']
 
