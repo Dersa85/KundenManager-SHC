@@ -1,5 +1,6 @@
 from database.member import Member
 from database.hard_drive import HardDrive
+from datetime import datetime
 
 
 # Die vorlage die bei der Klasse Member ist soll in die Datei >members/0.json< gespeichet werden (ALSO JSON)
@@ -8,9 +9,6 @@ from database.hard_drive import HardDrive
 
 
 
-
-dict = HardDrive.load('./members/0.json')
-member = Member(dict)
 
 
 
