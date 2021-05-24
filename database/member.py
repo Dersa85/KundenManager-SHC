@@ -27,4 +27,56 @@ class Member:
             'health-problems': ''
         }
 
+    def get_first_name(self, parent=0):
+        """ parent = 0 bedeutet das es vom Member gewollt ist.
+            parent = 1 währe dann von ersten Elternteil
+            parent = 2 währe dann von ersten Elternteil
+        """
+        return
+
+    def get_last_name(self, parent=0):
+        """ parent = 0 bedeutet das es vom Member gewollt ist.
+            parent = 1 währe dann von ersten Elternteil
+            parent = 2 währe dann von ersten Elternteil
+        """
+        return
+
+    def get_birthday(self):
+        return
+
+    def get_abo_category(self):
+        return
+
+    def get_abo_cycle(self):
+        return
+
+    def get_entry_date(self):
+        return
+
+    def get_cancellation_date(self):
+        return
+
+    def get_exit_date(self):
+        return
+
+    def get_street(self):
+        return
+
+    def get_housenumber(self):
+        return
+
+    def get_city(self):
+        return
+
+    def get_zip_code(self):
+        return
+
+    def get_contact_number(self):
+        return
+
+    def get_email(self):
+        return
+
+    def get_health_problem(self):
+        return
 
